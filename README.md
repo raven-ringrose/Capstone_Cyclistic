@@ -9,6 +9,16 @@ The goal: uncover insights that support **data-driven membership conversion stra
 
 ---
 
+flowchart TD
+    A[📥 Raw Data<br>2019_Q1_Cleaned + 2020_Q2_Cleaned] --> B[🗄️ BigQuery Dataset<br>Cyclistic]
+    B --> C[🛠️ create_trips_clean.sql<br>Normalize + Merge Tables]
+    C --> D[✔️ trips_clean Table<br>Cleaned, Unified Schema]
+    D --> E[🔍 data_validation.sql<br>Quality & Consistency Checks]
+    E --> F[📈 Analysis & Visualization<br>Looker Studio + R (ggplot2)]
+    F --> G[📄 Final Report<br>Capstone_Cyclistic_by_Raven_Ringrose.pdf]
+
+---
+
 ## 🧰 Tools Used
 - **BigQuery** — SQL queries for data cleaning, aggregation, and exploration  
 - **Looker Studio** — dashboard creation and visual analytics  
